@@ -6,6 +6,7 @@
  */
 
 const fs = require('fs');
+const UglifyJS = require('uglify-js');
 const ds = require('./decrypt-str');
 
 function decString(code) {
@@ -68,4 +69,6 @@ function decString(code) {
 let code = fs.readFileSync('./hello-world-obf.js', 'utf8');
 
 // write to file
-fs.writeFileSync(`./dist/${+new Date()}.js`, decString(code), 'utf8');
+fs.writeFileSync(`./dist/${+new Date()}.js`, UglifyJS.parse(decString(code)).print_to_string({
+    beautify: true,
+}), 'utf8');

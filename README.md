@@ -5,7 +5,10 @@
 ## Usage
 
 **Notice: 本工具仅支持node 8及以上版本**
+
 ```shell
+# 安装依赖
+npm install
 # 读取当前目录的hello-world-obf.js并还原其字符串
 node index.js
 ```

@@ -10,5 +10,8 @@
     "javascript-obfuscator"
   ],
   "author": "conanliu",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "uglify-js": "^3.4.9"
+  }
 }
